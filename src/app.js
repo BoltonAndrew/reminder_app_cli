@@ -1,6 +1,6 @@
 /*jshint esversion:8*/
 const yargs = require('yargs');
-const { addNote } = require('../utils/notes');
+const { addNote, listNotes } = require('../utils/notes');
 
 const command = process.argv[2];
 
@@ -10,9 +10,8 @@ if (command == "add") {
 } else if (command == "remove") {
     console.log("removing a note");
 } else if (command == "list") {
-    console.log("making a list");
+    console.log("showing the note list");
+    listNotes();
 } else {
     console.log("command not recognised");
 }
-
-
